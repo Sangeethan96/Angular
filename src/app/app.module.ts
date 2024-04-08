@@ -9,7 +9,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ShowEmpComponent } from './employee/show-emp/show-emp.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule ,Route} from '@angular/router';
+import { RouterModule ,Route, RouterOutlet} from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -26,7 +26,8 @@ import { RouterTestingModule } from '@angular/router/testing';
     AddEditDepComponent,
     EmployeeComponent,
     ShowEmpComponent,
-    AddEditDepComponent
+    AddEditDepComponent,
+    RouterOutlet
   ],
   imports: [
     CommonModule,
@@ -35,10 +36,10 @@ import { RouterTestingModule } from '@angular/router/testing';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule,
+    RouterModule.forRoot([]),
     FormsModule,
     NgForm,
-    ToastrModule.forRoot(), // ToastrModule added
+    //ToastrModule.forRoot(), // ToastrModule added
    
   ],
   exports: [
