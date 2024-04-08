@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedService } from './shared.service';
 import { AppComponent } from './app.component';
@@ -15,6 +15,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,NgForm,ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
+import { routes } from './app.routes';
 
 
 
@@ -36,7 +37,7 @@ import { RouterTestingModule } from '@angular/router/testing';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([]),
+    RouterModule.forRoot(routes),
     FormsModule,
     NgForm,
     //ToastrModule.forRoot(), // ToastrModule added
@@ -46,6 +47,7 @@ import { RouterTestingModule } from '@angular/router/testing';
     ShowDepComponent,
     AddEditDepComponent
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers:[SharedService],
   bootstrap:[AppComponent]
 })

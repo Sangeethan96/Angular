@@ -4,7 +4,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AddEditDepComponent } from '../add-edit-dep/add-edit-dep.component';
 import { FormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 
 interface Item {
   DepartmentId: number;
